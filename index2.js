@@ -16,7 +16,7 @@ function multigrab(times) {
 }
 
 while (true) {
-	if (prompt("e?") == "grab") {
+	if (prompt("Grab your Grabs") == "grab") {
 		alert(grab());
 	}
 }
