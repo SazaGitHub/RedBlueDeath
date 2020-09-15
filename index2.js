@@ -24,7 +24,7 @@ while (true) {
 	} else if (
 		answer.startsWith("multigrab") &&
 		answer.split(" ").length > 1 &&
-		isNaN(Number(answer.split(" ")[1]))
+		!isNaN(Number(answer.split(" ")[1]))
 	) {
 		try {
 			const grabs = multigrab(Number(answer.split(" ")[1]));
