@@ -10,13 +10,33 @@ function grab() {
 }
 
 function multigrab(times) {
+	let grabs = [];
 	for (let i = 0; i < times; i++) {
-		console.log(grab());
+		grabs.push(grab());
 	}
+	return grabs;
 }
 
 while (true) {
-	if (prompt("Grab your Grabs") == "grab") {
+	const answer = prompt("Grab your Grabs?");
+	if (answer === "grab") {
 		alert(grab());
+	} else if (
+		answer.startsWith("multigrab") &&
+		answer.split(" ").length > 1 &&
+		Number(answer.split(" ")[1]) !== NaN
+	) {
+		try {
+			const grabs = multigrab(Number(answer.split(" ")[1]));
+			let grabString = "";
+			for (const i in grabs) {
+				grabString += `${grabs[i]}\n`;
+			}
+			alert(grabString.trim());
+		} catch {
+			alert("You did it wrong,");
+		}
+	} else {
+		alert("You did it wrong,");
 	}
 }
