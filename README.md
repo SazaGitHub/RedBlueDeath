@@ -1,7 +1,7 @@
 # RedBlueDeath
 I made a game, while learning codes
 
-[lay my AMAZING game here](http://sazagithub.github.io/RedBlueDeath)
+Play my AMAZING game [here](http://sazagithub.github.io/RedBlueDeath)
 
 Type "grab" to grab your grabs.
 
